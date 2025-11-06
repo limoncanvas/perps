@@ -1,0 +1,39 @@
+{
+  "name": "hyperliquid-perp-bot",
+  "version": "1.0.0",
+  "description": "Perpetual futures trading bot for Hyperliquid",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "watch": "tsc -w",
+    "clean": "rm -rf dist",
+    "performance": "ts-node src/utils/viewPerformance.ts",
+    "performance:export": "ts-node src/utils/viewPerformance.ts --export",
+    "dashboard": "ts-node src/dashboard/server.ts",
+    "test-trade": "ts-node src/utils/testTrade.ts"
+  },
+  "keywords": [
+    "hyperliquid",
+    "trading-bot",
+    "perp",
+    "futures",
+    "crypto"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ethers": "^6.10.0",
+    "express": "^5.1.0",
+    "hyperliquid": "^1.0.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.5",
+    "@types/node": "^20.11.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
